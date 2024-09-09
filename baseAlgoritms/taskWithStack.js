@@ -2,28 +2,8 @@
 //они равны.
 //Символ решетки # в строке должен интерпретироваться как backspace.
 
-class Stack {
-  items = [];
-
-  push(value) {
-    this.items.push(value);
-  }
-
-  pop() {
-    return this.items.pop();
-  }
-
-  isEmpty() {
-    return this.items.length == 0;
-  }
-
-  convertToString() {
-    return this.items.join("");
-  }
-}
-
 const convertString = (str) => {
-  let stack = new Stack();
+  let stack = [];
   let lexems = str.split("");
   for (let lexem of lexems) {
     if (lexem === "#") {
@@ -33,7 +13,7 @@ const convertString = (str) => {
     }
   }
 
-  return stack.convertToString();
+  return stack.join("");
 };
 
 const solution = (str1, str2) => {
