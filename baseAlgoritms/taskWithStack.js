@@ -17,7 +17,7 @@ class Stack {
     return this.items.length == 0;
   }
 
-  convertString() {
+  convertToString() {
     return this.items.join("");
   }
 }
@@ -33,7 +33,7 @@ const convertString = (str) => {
     }
   }
 
-  return stack.convertString();
+  return stack.convertToString();
 };
 
 const solution = (str1, str2) => {
