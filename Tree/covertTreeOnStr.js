@@ -120,7 +120,7 @@ const convertTreeOnStr = (book) => {
   };
   setChapters(book);
 
-  return result;
+  return result.trim();
 };
 
 console.log("convertTreeOnStr(book)", convertTreeOnStr(book));
